@@ -9,7 +9,7 @@ from PIL import Image
 
 def create_dir(path,class_list):
   ''' The function takes in the path and list of the classes to 
-        create directories for different  classes
+        create directories for different classes.
         Parameters:
         path: The path where train and validation directories needs to be created.
         class_list: The list of labels in the dataset.''' 
@@ -29,8 +29,8 @@ def save_imgs(df,df_path,pixel_col,class_col,class_list,prefix):
      Parameters: 
      df: Dataframe that needs to be converted.
      df_path: Path to the directory (dtype-string)
-              Example- If the training ddataframe is fed, df_path should be the path
-              to rhe train directory created.
+              Example- If the training dataframe is fed, df_path should be the path
+              to the train directory created.
      pixel_col: Name of the column containing pixels in string object
      class_col: Name of the column for data labels
      prefix: train- for training set, valid- for validation set  '''
