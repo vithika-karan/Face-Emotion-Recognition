@@ -5,7 +5,7 @@ from tensorflow import keras
 from keras.preprocessing.image import img_to_array
 import streamlit as st
 import cv2
-from streamlit_webrtc import webrtc_streamer, VideoTransformerBase
+from streamlit_webrtc import webrtc_streamer, VideoTransformerBase,RTCConfiguration
 
 #page title
 st.set_page_config(page_title="Emotion Detection")
@@ -61,7 +61,9 @@ def main():
         webrtc_streamer(key="example", video_transformer_factory=VideoTransformer,media_stream_constraints={
             "video": True,
             "audio": False
-        })
+        },rtc_configuration=RTCConfiguration(
+    {"iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]}
+))
     
     elif page_name == "About":
         about_html = """<body>
