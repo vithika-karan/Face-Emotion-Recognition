@@ -3,6 +3,7 @@ import numpy as np
 import tensorflow as tf
 import cv2
 
+
 #load model
 model = tf.keras.models.load_model(r"C:\Users\VITHIKA KARAN\github\Face-Emotion-Recognition\Data & Resources\Emotion Detection Model\emotion_detection.h5")
 
@@ -32,7 +33,7 @@ while cap.isOpened():
     try:
         for (x,y, w,h) in faces:
             #frame rectangle
-            cv2.rectangle(img, pt1 = (x,y),pt2 = (x+w, y+h), color = (0,0,255),thickness = 2)
+            cv2.rectangle(img, pt1 = (x,y),pt2 = (x+w, y+h), color = (255,0,0),thickness = 2)
             roi_gray = gray_image[y-5:y+h+5,x-5:x+w+5]
             roi_gray=cv2.resize(roi_gray,(48,48))
             image_pixels = tf.keras.preprocessing.image.img_to_array(roi_gray)
@@ -42,9 +43,9 @@ while cap.isOpened():
             predictions = model.predict(image_pixels)
             max_index = np.argmax(predictions[0])
             #map predictions
-            emotion_detection = ('Anger', 'Disgust', 'Fear', 'Happy', 'Sad', 'Surprised', 'Neutral')
+            emotion_detection = ('You seem Angry.', 'You seem Disgusted.', 'Fear Detected!!', "Yayy, You seem Happy.", 'You seem Sad.', 'Surprised!!!', 'You seem Neutral.')
             emotion_prediction = emotion_detection[max_index]
-            cv2.putText(img,emotion_prediction, (int(x+w/3),int(y)),font,0.9, lable_color,2)
+            cv2.putText(img,emotion_prediction, (int(x),int(y)),font,0.9, lable_color,2)
             
     except :
         pass
