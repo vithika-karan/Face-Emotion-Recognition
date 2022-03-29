@@ -5,9 +5,9 @@ import cv2
 
 
 #load model
-model = tf.keras.models.load_model(r"C:\Users\VITHIKA KARAN\github\Face-Emotion-Recognition\Data & Resources\Emotion Detection Model\emotion_detection.h5")
+model = tf.keras.models.load_model("emotion_detection.h5")
 
-face_haar_cascade = cv2.CascadeClassifier(r'C:\Users\VITHIKA KARAN\github\Face-Emotion-Recognition\Data & Resources\haarcascade_frontalface_default.xml')
+face_haar_cascade = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
 
 #code for real time detection
 cap=cv2.VideoCapture(0)
