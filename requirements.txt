@@ -1,7 +1,5 @@
 numpy
-pandas
 streamlit
 opencv-python
 streamlit-webrtc
-tensorflow
-keras
+tensorflow-cpu
