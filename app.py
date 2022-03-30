@@ -1,7 +1,8 @@
 #importing libraries
 import numpy as np
 import tensorflow as tf
-from tf.keras.preprocessing.image import img_to_array
+from tensorflow import keras
+from keras.preprocessing.image import img_to_array
 import streamlit as st
 import cv2
 from streamlit_webrtc import webrtc_streamer, VideoTransformerBase,RTCConfiguration
