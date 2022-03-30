@@ -1,5 +1,7 @@
 # slugignore
 *.zip
 *.pdf
+*.png
 /Data
 /Docs
+/Images
