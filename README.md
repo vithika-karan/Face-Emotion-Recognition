@@ -43,6 +43,6 @@ The dataset used in training the CNN model for the above mentioned problem state
 * Heroku URL - https://face-emo-recog1.herokuapp.com/
 * AWS ec2 instance 
 (streamlit external url) - http://54.84.63.103:8501/
-(Note: Since Google Chrome doesnt allow media access from unsecure origins,to access the app, it is needed to exclude the link. Enable camera for insecure origins in chrome from ‘chrome://flags/#unsafely-treat-insecure-origin-as-secure’ by putting in the link to access the app)
+(Note: Since Google Chrome doesnt allow media access from unsecure origins, to access the app, it is needed to exclude the link. Enable camera for insecure origins in chrome from ‘chrome://flags/#unsafely-treat-insecure-origin-as-secure’ by putting in the link to access the app)
 
 
