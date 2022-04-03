@@ -9,5 +9,40 @@ The solution to this problem is by recognizing facial emotions. This is a live f
 ### **FER2013 Dataset**
 The dataset used in training the CNN model for the above mentioned problem statement is FER2013 and can be downloaded from [Kaggle](https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge/data) or Data folder of the repository. The data consists of grayscale images of faces at a resolution of 48x48 pixels. The faces have been automatically registered such that they are more or less centred in each image and take up around the same amount of area. The seven categories based on the emotion expressed in the facial expression are (0=Angry, 1=Disgust, 2=Fear, 3=Happy, 4=Sad, 5=Surprise, 6=Neutral). There are 28,709 examples in the training set and 3,589 examples in the public test set.
 
+### **Technologies**
+* Pandas
+* Numpy
+* Matplotlib
+* Seaborn
+* PIL
+* Keras 
+* Tensorflow
+* OpenCV-Python
+* Streamlit
+
+### **Approach**
+* Exploratory Data Analysis
+* Data Preprocessing
+* Data Augmentation
+* CNN Model Building
+* Model Performance and Evaluation
+* Real Time Emotion Detection
+* Streamlit Web Application
+* Web App Deployment on Heroku and AWS ec2 
+
+
+### **Run Real Time Emotion Detection Locally**
+* Create a project folder
+* Create a virtual environment
+* Download real_time_demo.py, emotion_detection.h5 and haarcascade_frontalface_default.xml in the same folder.
+* Install the dependencies from requirements.txt 
+(Note: Install opencv-python as well, opencv-python-headless in the requirements file is to adjust the size requirements for web app deployment purposes. To run app.py requirements.txt is enough.)
+* Run 
+
+### **Web App Deployment**
+* Heroku URL - https://face-emo-recog1.herokuapp.com/
+* AWS ec2 instance 
+(streamlit external url) - http://54.84.63.103:8501/
+(Note: Since Google Chrome doesnt allow media access from unsecure origins,to access the app, it is needed to exclude the link. Enable camera for insecure origins in chrome from ‘chrome://flags/#unsafely-treat-insecure-origin-as-secure’ by putting in the link to access the app)
 
 
